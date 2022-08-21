@@ -1,0 +1,15 @@
+export const Routes = {
+  HOME: 'Home',
+  WISH_CAROUSEL: 'WishCarousel',
+  CLOTHES: 'Clothes',
+  ROCKET: 'Rocket',
+  NAVIGATION_MENU: 'NavigationMenu',
+  TAXI: 'Taxi',
+  EYES_FOLLOW: 'EyesFollow',
+  SCROLL_HEADER: 'ScrollHeader',
+  MOVIES_CAROUSEL: 'MoviesCarousel',
+  IMAGE_MODAL_CAROUSEL: 'ImageModalCarousel',
+  LIST_IMAGE: 'ListImage',
+  MODAL_CAROUSEL: 'ModalCarousel',
+  MODAL: 'Modal',
+};
