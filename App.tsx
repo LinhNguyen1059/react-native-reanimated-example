@@ -27,6 +27,7 @@ import ImageModalCarouselScreen from './src/screens/image-modal-carousel';
 import ModalCarouselScreen from './src/screens/image-modal-carousel/modal-screen';
 import ListImageScreen from './src/screens/image-modal-carousel/list-image-screen';
 import ModalScreen from './src/screens/modal';
+import CarouselInfiniteScreen from './src/screens/carousel-infinite';
 
 const Stack = createNativeStackNavigator();
 
@@ -68,6 +69,10 @@ const App = () => {
           />
           <Stack.Screen name={Routes.LIST_IMAGE} component={ListImageScreen} />
           <Stack.Screen name={Routes.MODAL} component={ModalScreen} />
+          <Stack.Screen
+            name={Routes.CAROUSEL_INFINITE}
+            component={CarouselInfiniteScreen}
+          />
         </Stack.Group>
         <Stack.Group screenOptions={{presentation: 'modal'}}>
           <Stack.Screen

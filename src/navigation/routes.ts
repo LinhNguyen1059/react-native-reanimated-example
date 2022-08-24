@@ -12,4 +12,5 @@ export const Routes = {
   LIST_IMAGE: 'ListImage',
   MODAL_CAROUSEL: 'ModalCarousel',
   MODAL: 'Modal',
+  CAROUSEL_INFINITE: 'CarouselInfinite',
 };

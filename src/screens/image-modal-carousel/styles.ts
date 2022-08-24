@@ -107,7 +107,10 @@ export default StyleSheet.create({
     alignSelf: 'flex-end',
   },
   smallImageModalContainer: {
+    flex: 1,
     width: SCREEN_WIDTH,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   smallImageModal: {
     width: SCREEN_WIDTH,
@@ -115,6 +118,7 @@ export default StyleSheet.create({
     resizeMode: 'cover',
   },
   flatListContainer: {
+    flex: 1,
     alignItems: 'center',
   },
 

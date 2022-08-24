@@ -1,8 +1,8 @@
 import {useNavigation} from '@react-navigation/native';
+import {FlashList} from '@shopify/flash-list';
 import React from 'react';
 import {
   Dimensions,
-  FlatList,
   Image,
   NativeScrollEvent,
   NativeSyntheticEvent,
@@ -23,8 +23,8 @@ export default function ModalCarouselScreen(props) {
   const {initialIndex} = props.route.params;
   const navigation = useNavigation();
   const inset = useSafeAreaInsets();
-  const topRef = React.useRef<FlatList>(null);
-  const bottomRef = React.useRef<FlatList>(null);
+  const topRef = React.useRef<FlashList<any>>(null);
+  const bottomRef = React.useRef<FlashList<any>>(null);
 
   const [currentIndex, setCurrentIndex] = React.useState(initialIndex);
 
@@ -89,39 +89,35 @@ export default function ModalCarouselScreen(props) {
         <Text>Close</Text>
       </TouchableOpacity>
 
-      <FlatList
-        ref={topRef}
-        data={imageModalData}
-        keyExtractor={item => item.id}
-        renderItem={renderItem}
-        horizontal
-        pagingEnabled
-        initialScrollIndex={initialIndex}
-        showsHorizontalScrollIndicator={false}
-        getItemLayout={(_, idx) => ({
-          length: SCREEN_WIDTH,
-          offset: SCREEN_WIDTH * idx,
-          index: idx,
-        })}
-        contentContainerStyle={styles.flatListContainer}
-        onMomentumScrollEnd={onMomentumScrollEnd}
-      />
+      <View style={styles.flatListContainer}>
+        <FlashList
+          ref={topRef}
+          data={imageModalData}
+          keyExtractor={item => item.id}
+          renderItem={renderItem}
+          horizontal
+          pagingEnabled
+          initialScrollIndex={initialIndex}
+          showsHorizontalScrollIndicator={false}
+          estimatedItemSize={SCREEN_WIDTH}
+          estimatedFirstItemOffset={SCREEN_WIDTH}
+          onMomentumScrollEnd={onMomentumScrollEnd}
+        />
+      </View>
 
-      <FlatList
-        ref={bottomRef}
-        data={imageModalData}
-        keyExtractor={item => item.id}
-        renderItem={renderFlashListItem}
-        getItemLayout={(_, idx) => ({
-          length: 100,
-          offset: 100 * idx,
-          index: idx,
-        })}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        initialScrollIndex={initialIndex}
-        style={thumbStyles}
-      />
+      <View style={thumbStyles}>
+        <FlashList
+          ref={bottomRef}
+          data={imageModalData}
+          keyExtractor={item => item.id}
+          renderItem={renderFlashListItem}
+          estimatedItemSize={100}
+          extraData={currentIndex}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          initialScrollIndex={initialIndex}
+        />
+      </View>
     </SafeAreaView>
   );
 }

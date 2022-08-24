@@ -4,6 +4,7 @@ import {
   FlatList,
   Image,
   SafeAreaView,
+  StatusBar,
   Text,
   TouchableOpacity,
 } from 'react-native';
@@ -28,6 +29,7 @@ const list: ListItemProps[] = [
   {id: 8, name: '🍿 Movies carousel', route: Routes.MOVIES_CAROUSEL},
   {id: 9, name: '🌃 Images modal carousel', route: Routes.IMAGE_MODAL_CAROUSEL},
   {id: 10, name: '🤳 Modal', route: Routes.MODAL},
+  {id: 11, name: '🌈 Carousel infinite', route: Routes.CAROUSEL_INFINITE},
 ];
 
 function HomeScreen() {
@@ -50,6 +52,7 @@ function HomeScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
+      <StatusBar barStyle="light-content" />
       <FlatList
         data={list}
         renderItem={ListItem}
