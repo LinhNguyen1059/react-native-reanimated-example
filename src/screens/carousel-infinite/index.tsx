@@ -38,6 +38,7 @@ export default function CarouselInfiniteScreen() {
           data={list}
           keyExtractor={(item: string, index: number) => `${item}_${index}`}
           renderItem={renderItem}
+          autoPlay
         />
       </SafeAreaView>
     </View>
