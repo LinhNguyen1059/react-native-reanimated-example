@@ -30,6 +30,7 @@ const list: ListItemProps[] = [
   {id: 9, name: '🌃 Images modal carousel', route: Routes.IMAGE_MODAL_CAROUSEL},
   {id: 10, name: '🤳 Modal', route: Routes.MODAL},
   {id: 11, name: '🌈 Carousel infinite', route: Routes.CAROUSEL_INFINITE},
+  {id: 12, name: '🩴 Onboarding', route: Routes.ONBOARDING},
 ];
 
 function HomeScreen() {
@@ -52,7 +53,7 @@ function HomeScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="light-content" />
+      <StatusBar barStyle="dark-content" />
       <FlatList
         data={list}
         renderItem={ListItem}

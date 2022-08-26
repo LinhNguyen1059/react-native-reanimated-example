@@ -13,4 +13,5 @@ export const Routes = {
   MODAL_CAROUSEL: 'ModalCarousel',
   MODAL: 'Modal',
   CAROUSEL_INFINITE: 'CarouselInfinite',
+  ONBOARDING: 'Onboarding',
 };
