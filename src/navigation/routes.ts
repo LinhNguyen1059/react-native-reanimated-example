@@ -14,4 +14,5 @@ export const Routes = {
   MODAL: 'Modal',
   CAROUSEL_INFINITE: 'CarouselInfinite',
   ONBOARDING: 'Onboarding',
+  TAB_BAR: 'TabBar',
 };
