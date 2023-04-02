@@ -32,6 +32,8 @@ const list: ListItemProps[] = [
   {id: 11, name: '🌈 Carousel infinite', route: Routes.CAROUSEL_INFINITE},
   {id: 12, name: '🩴 Onboarding', route: Routes.ONBOARDING},
   {id: 13, name: '🍹 Tab bar', route: Routes.TAB_BAR},
+  {id: 14, name: '🏖️ Picker', route: Routes.PICKER},
+  {id: 15, name: '📅 Calendar', route: Routes.CALENDAR},
 ];
 
 function HomeScreen() {

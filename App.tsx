@@ -30,6 +30,8 @@ import ModalScreen from './src/screens/modal';
 import CarouselInfiniteScreen from './src/screens/carousel-infinite';
 import OnboardingScreen from './src/screens/onboarding';
 import TabBarScreen from './src/screens/tab-bar';
+import PickerScreen from './src/screens/picker';
+import CalendarScreen from './src/screens/calendar';
 
 const Stack = createNativeStackNavigator();
 
@@ -77,6 +79,8 @@ const App = () => {
           />
           <Stack.Screen name={Routes.ONBOARDING} component={OnboardingScreen} />
           <Stack.Screen name={Routes.TAB_BAR} component={TabBarScreen} />
+          <Stack.Screen name={Routes.PICKER} component={PickerScreen} />
+          <Stack.Screen name={Routes.CALENDAR} component={CalendarScreen} />
         </Stack.Group>
         <Stack.Group screenOptions={{presentation: 'modal'}}>
           <Stack.Screen

@@ -15,4 +15,6 @@ export const Routes = {
   CAROUSEL_INFINITE: 'CarouselInfinite',
   ONBOARDING: 'Onboarding',
   TAB_BAR: 'TabBar',
+  PICKER: 'Picker',
+  CALENDAR: 'Calendar',
 };
